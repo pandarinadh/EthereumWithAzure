@@ -1,0 +1,61 @@
+Goto https://chocolatey.org/install
+Copy below text
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+Goto GitHub
+Create a repository by selecting local folder
+open VisualStudioCode WITH Run as Administator with the above created folder
+Open the terminal
+Execute the below command
+    
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+To install the git extensions
+    choco install git -params ~/GitAndUnixToolsOnPath 
+
+to secure all calls , run below command in git bash
+git config --system http.sslverify false
+
+npm install -g node-gyp
+
+npm install --global --production windows-build-tools
+
+npm install -g ethereumjs-testrpc
+
+npm install install -g truffle
+
+To create a project
+create a directory
+at terminal
+truffle init // that will create the structure in the directory
+
+in migrations, 2_deploy_contracts.js file the add the file you want to migrate
+
+truffle compile // will compile the code
+
+other termal 
+testrpc
+
+in the truffle.js file add below in module.exports 
+
+networks:{
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*" // match any network id
+    }
+  }
+
+truffle console
+var hw
+HelloWorld.deployed().then(function(deployed){hw=deployed;});
+hw.SayHello.call()
+
+to exit console
+
+.exit
+
+
+
