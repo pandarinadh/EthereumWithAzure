@@ -32,8 +32,9 @@ module.exports = {
 };
 
 /*
+  truffle init 
 
-Copy from Portal SSH-TO-FIRST-TX-NODE-REGION1
+  Copy from Portal SSH-TO-FIRST-TX-NODE-REGION1
 ssh -p 4000 pandari@bchhej-dns-reg1.eastus.cloudapp.azure.com
 open terminal enter the command
 
@@ -54,9 +55,9 @@ password
 truffle console type the following commands in truffle console
 
 truffle console --network production
- var ss
-ScoreStore.deployed().then(function(deployed){ss=deployed;});
-ss.AddPersonScore("Pandari",10)
+var mg
 
-ss.GetScore.call("Pandari")
+MyGame.deployed().then(function(deployed){mg=deployed;});
+mg.showScore.call("Pandari").then(function(returnValue){console.log(returnValue);});
+
 */
